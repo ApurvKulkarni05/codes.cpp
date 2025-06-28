@@ -1,1 +1,2 @@
-hello everyone , in this github repo i solved problems in c++ coding 
+Hello everyone , 
+Lets grab the knowlegde about coding through c++
