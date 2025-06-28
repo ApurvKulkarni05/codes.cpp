@@ -1,0 +1,18 @@
+hello connections , 
+now let us talk about longest valid parenthesis problem which another important problem 
+
+i used this approach=>
+Initialize a stack and push -1 as a base index to handle edge cases.
+
+Iterate through the string:
+
+If you encounter '(', push its index to the stack.
+
+If you encounter ')', pop the top:
+
+If the stack becomes empty, push the current index as a new base.
+Else, update the max valid length as the difference between current index and the index at the top of the stack.
+
+Return the maximum length found.
+most important differnce betwen valid parenthesis and longest valid parenthesis will be in valid uestion we want to check entire string is valid or not
+and in longest valid parenthesis we want to check one string contain one substring 
