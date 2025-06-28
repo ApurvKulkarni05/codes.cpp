@@ -1,0 +1,32 @@
+hello everyone , 
+in this i used basically stack concept and check if opening bracket have proper closing bracket then pop it from stack which opening brackets are pushing into stack
+so check one -one condition and check properly
+
+#include <iostream>
+#include <stack>
+using namespace std;
+
+bool isValid(string s) {
+    stack<char> st;
+
+    for (char c : s) {
+        // If opening bracket, push to stack
+        if (c == '(' || c == '{' || c == '[') {
+            st.push(c);
+        }
+        // If closing bracket
+        else {
+            if (st.empty()) return false; // No opening to match
+            char top = st.top();
+            // Check if top matches the closing
+            if ((c == ')' && top != '(') ||
+                (c == '}' && top != '{') ||
+                (c == ']' && top != '[')) {
+                return false;
+            }
+            st.pop(); // Remove the matched opening
+        }
+    }
+
+    return st.empty(); // If stack is empty, it's valid
+}
