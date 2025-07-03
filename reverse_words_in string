@@ -1,0 +1,35 @@
+class Solution {
+public:
+    string reverseWords(string s) {
+        int n = s.size();
+        string ans = "";
+        reverse(s.begin(),s.end());
+        for (int i = 0; i<n; i++){
+            string word="";
+            while(i<n && s[i]!=' ' ){
+                word+=s[i];
+                i++;
+            }
+            reverse(word.begin(),word.end());
+            if (word.size()>0){
+                ans+= " "+word;}
+
+        }
+        return ans.substr(1);
+    }
+};   
+
+//   L6-> reverse entire string 
+L7-> then in for loop iterate over string   i moves through the string character by character
+L8-> Initializes an empty string to temporarily store a word
+This resets word to empty for each new word we find..
+L9->eeps collecting characters into word as long as:
+
+We are not past the string (i < n)
+The current character is not a space (s[i] != ' ')
+L10->Append the current character to word..
+L11-> Fixes the order of the current word.
+
+if word size >0
+then 
+ans should beAdds each valid word with a leading space
