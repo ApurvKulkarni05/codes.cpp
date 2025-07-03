@@ -1,0 +1,26 @@
+hello everyone , in this problem when i am solving this question
+facing problem beause i dont know how can i solve these 
+so i used unordered map because map concept logic is key value pair 
+key means letter and value means how many times show in string (frequency)
+then just 
+apply sort function 
+and get answer 
+//class Solution {
+public:
+    string frequencySort(string s) {
+        unordered_map<int , char>freq;
+
+         for (int i = 0; i < s.length(); i++) {
+            char ch = s[i];
+            freq[ch] = freq[ch] + 1;
+        }
+
+       sort(s.begin(), s.end(), [&](char a, char b) {
+    return freq[a] > freq[b];
+   });
+   
+
+   return s;
+    }
+};
+//
