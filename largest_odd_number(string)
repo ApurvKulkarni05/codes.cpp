@@ -1,0 +1,20 @@
+in this ascii code concept be there because in if(num[i]-'0')%2!=0 
+then 
+return num.substr(0,i+1);
+let tke example suppose string is "35427" then by this loop s[i] is 7 then is char beause we strore in string 
+then if we proceed then our utput get ascii code value of 7 so that is why we subtract '0' means 7 ascii value is 55 and 0 is 48 
+55-48 is 7 
+
+
+class Solution {
+public:
+    string largestOddNumber(string num) {
+        for(int i = num.length()-1 ; i>=0 ; i--){
+            if ((num[i] - '0') % 2 != 0) {  // check if digit is odd
+                return num.substr(0, i + 1);  // return prefix ending at i
+            }
+        }
+         return "";
+        }
+       
+    };
