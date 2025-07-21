@@ -29,3 +29,6 @@ return head;
 
 
 //i used this logic 
+//TC=O(2N)
+//SC=O(N)
+
